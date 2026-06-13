@@ -37,14 +37,30 @@ const PropertySchema = new mongoose.Schema(
       required: true,
     },
 
+    furnishing: {
+      type: String,
+      enum: ["Fully Furnished", "Semi Furnished", "Unfurnished"],
+    },
+
+    parking: {
+      type: Boolean,
+      default: false,
+    },
+
+    contactNumber: {
+      type: String,
+      required: true,
+    },
+
     propertyType: {
       type: String,
-      enum: ["Apartment", "Villa", "House", "PG"],
+      enum: ["Apartment", "House", "Villa", "PG"],
       required: true,
     },
 
     image: {
       type: String,
+      default: "",
     },
 
     owner: {
