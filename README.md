@@ -6,15 +6,6 @@ Rentify is a modern rental marketplace web application where tenants can search 
 
 Rentify provides an end-to-end flow for property rentals: user authentication, property listings, searching and filtering, favorites, booking/inquiry management, and owner dashboards to manage listings and inquiries. The backend uses MongoDB for persistence and Cloudinary for image uploads.
 
-## Screenshots
-
-Add screenshots to `client/public/screenshots` and reference them here. Example:
-
-- ![Home](/client/public/screenshots/home.png)
-- ![Properties](/client/public/screenshots/properties.png)
-- ![Property Details](/client/public/screenshots/property-details.png)
-
-If you don't have screenshots yet, run the app locally and capture images showing the Home, Properties list, Property Details, and Dashboards.
 
 ## Features
 
@@ -101,13 +92,3 @@ See the `server/routes` folder for the full list of endpoints.
 
 Contributions are welcome. Please open issues for bugs or feature requests. For code contributions, fork the repo and submit a pull request.
 
-## License
-
-This project is provided for internship submission and evaluation purposes. Add a license file if you plan to publish or open-source it.
-
----
-
-If you want, I can also:
-
-- Add screenshots into `client/public/screenshots` and update this README with inline images.
-- Create a `docs/` folder with design decisions and API spec.
