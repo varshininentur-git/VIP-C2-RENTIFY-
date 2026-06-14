@@ -1,15 +1,17 @@
 const express = require("express");
-
-const {
-  addProperty,
-  updateProperty,
-  deleteProperty,
-} = require("../controllers/ownerController");
-
 const router = express.Router();
 
-router.post("/add-property", addProperty);
-router.put("/update-property/:id", updateProperty);
-router.delete("/delete-property/:id", deleteProperty);
+const authMiddleware = require("../middlewares/authMiddleware");
+const authorize = require("../middlewares/roleMiddleware");
+
+const {
+  getOwnerInquiries,
+  updateBookingStatus,
+} = require("../controllers/bookingController");
+
+// Protected Routes - Owner only
+router.get("/inquiries", authMiddleware, authorize(["owner"]), getOwnerInquiries); // Get all inquiries for owner's properties
+
+router.patch("/inquiries/:id/status", authMiddleware, authorize(["owner"]), updateBookingStatus); // Update booking status
 
 module.exports = router;
