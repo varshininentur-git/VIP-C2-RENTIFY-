@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://rectify-backend-90b3.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
